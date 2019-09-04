@@ -1,43 +1,65 @@
-input{
-	width: 30%;
-	padding: 5px;
-	border: 2px solid orange;
-	border-radius: 5px;
-}
 body{
-	background-color: #FFE933;
+	padding: 0;
+	margin: 0;
+	background-color: black;
+}
+#shoppingListPad {
+	background-image: url('Background (1).jpg');
+	width: 350px;
+	height: 670px;
+	background-color: #FFF;
+	margin: 0 auto;
+	border: 1px solid #EEE;
+	border-radius: 5px;
+	overflow: scroll;
+}
+#container{
+	padding: 1em 2em 1em 2em;
+}
+p {
+	text-align: center;
+	font-size: 12px;
+	color: #ff0905;
+	font-style: italic;
+}
+input {
+	margin-left: 10px;
+}
+#text__box{
+	text-align: left;
+	background-color: #faa191;
+	border-radius: 5px;
+	border-color: #ff0905;
+	font-size: 20px;
+	width: 70%
+}
+#create__button {
+	background-color: #f0c7a3;
+	border-radius: 5px;
+	border-color: black;
+	font-size: 20px;
+	color: #3bff05;
+}
+#clear__button {
+	background-color: #f0c7a3;
+	border-radius: 5px;
+	border-color: black;
+	font-size: 20px;
+	color: red;
 }
 div{
 	font-style: italic;
 	font-weight: 200;
-	font-size: 30px;
+	font-size: 12px;
 }
-div shoppingList{
-	width: 38%;
-	padding: 5px 0px 30px 5px;
-	margin: 10px 0px 0px 0px;
-	background-color: #FFD700;
-	font-size: 30px;
+ul > li{
+	margin-right: 50px;
+	width: 100%;
+	background-color: #f0c7a3;
+	font-size: 15px;
 	font-weight: 200;
 	border: 2px;
-	display: flex;
-	justify-content: space-between;
-
 }
-label{
-	text-align: center;
-	width: 50px;
-	font-weight: bold;
-	font-size: 18px;
-	border: 2px solid #DAA520;
-	padding: 2px 5px 4px 5px;
-	margin: 5px;
-	border-radius: 5px;
-	color: green;
-}
-shoppingList.value{
-	width: 40%;
-	padding: 5px;
-	border: 2px solid orange;
-	border-radius: 5px;
+ul > li.type{
+	size: 20px;
 }
