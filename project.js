@@ -1,22 +1,20 @@
-let add = document.querySelector("label");
+let add = document.querySelectorAll("button")[0];
+let clear = document.querySelectorAll("button")[1];
 let shoppingListInput = document.querySelector("input");
-function push(){
-  let shoppingList = document.createElement("shoppingList");
-  shoppingList.appendChild(document.createTextNode(shoppingListInput.value));
-  document.querySelector("div").appendChild(shoppingList);
-  shoppingListInput.value = "";
+let list = document.getElementById("list");
 
-  document.querySelector("div").addEventListener("click", event => {
-  if (event.target.nodeName == "SHOPPINGLIST") {
-    let itemDescription = document.querySelector("input");
-    itemDescription.placeholder = "Input an item description";
-    let itemList = document.createElement("itemList");
-    document.body.appendChild(itemList);
-    itemList.appendChild(document.createTextNode(itemDescription.value));
-    document.querySelector("div").appendChild(itemList);
-    itemDescription.value = "";
-    }
-  }); 
+function push(){
+  let shoppingList = document.createElement("li");
+  shoppingList.innerHTML = shoppingListInput.value + "&ensp;" + "&ensp;"+ "&ensp;" + "&ensp;"+ "&ensp;"
+  + "<input type='checkbox'>Bought" +
+  "<input type='checkbox'>Delete"
+  list.appendChild(shoppingList);
+  shoppingListInput.value = "";
 };
 
+function deleteAll(){
+  document.getElementById("list").remove();
+}
 add.addEventListener('click', push);
+
+clear.addEventListener('click', deleteAll);
